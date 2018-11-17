@@ -1,0 +1,24 @@
+#container {
+	background: rgba(0,0,0,0.5);
+	margin: 0 auto;
+}
+
+.wham {
+	border: solid lavender;
+	margin: 5px;
+	width: 300px;
+	color: lavender;
+	display: inline-block;
+}
+
+span {
+	cursor: pointer;
+	margin: 2px;
+	border: solid lavender 1px;
+	border-radius: 2px;
+}
+
+span .new {
+	color: lavender;
+	font-size: 2.5em;
+}

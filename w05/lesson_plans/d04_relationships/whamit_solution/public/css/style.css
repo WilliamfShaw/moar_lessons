@@ -1,0 +1,51 @@
+body {
+  width: 80%;
+  margin: 0 auto;
+  font-family: Arial;
+  color: #333;
+  font-size: 16px;
+}
+
+li {
+  list-style: none;
+}
+
+#new-channel-name {
+  width: 100%;
+  box-sizing: padding-box;
+  padding: 12px;
+  font-size: 16px;
+}
+
+#wham-it {
+  width: 100%;
+  box-sizing: padding-box;
+  padding: 12px;
+  background: steelblue;
+  color: white;
+  font-size: 24px;
+  border:none;
+}
+
+.channel {
+  padding: 36px 0;
+  font-size: 24px;
+  border-bottom: 1px solid gray;
+}
+
+.channel span {
+  margin-right: 12px;
+  cursor: pointer;
+}
+
+.delete-channel     { color: firebrick }
+.delete-comment  { color: firebrick }
+.toggle-comments { color: gray }
+.channel-name:hover { color: steelblue }
+
+.channel-comments {
+  padding: 12px 0;
+  font-size: 16px;
+  margin-left: 48px;
+  display:none;
+}

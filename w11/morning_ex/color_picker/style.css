@@ -1,0 +1,43 @@
+body {
+	background: url(http://subtlepatterns.com/patterns/subtle_white_mini_waves.png);
+}
+#container {
+	margin: 0 auto;
+	width: 800px;
+	height: inherit;
+	text-align: center;
+	font-family: Raleway;
+	font-weight: 300;
+}
+#canvas {
+	margin: 0 auto;
+	border: 5px solid black;
+	box-sizing: border-box;
+	height: 360px;
+	width: 360px;
+}
+#readout {
+	background: rgba(117,117,117, .2);
+	margin: 20px auto;
+	height: 200px;
+	width: 360px;
+	border: 1px #333 solid;
+	box-sizing: border-box;
+	border-radius: 20px;
+}
+#swatch {
+	margin: 0 auto;
+	height: 75px;
+	width: 95%;
+	border-radius: 20px;
+}
+p, span {
+	letter-spacing: 1px;
+}
+p {
+	font-weight: 700;
+}
+
+span {
+	font-weight: 300;
+}

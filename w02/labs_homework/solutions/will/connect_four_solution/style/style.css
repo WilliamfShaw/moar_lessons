@@ -1,0 +1,16 @@
+#board {
+	position: absolute;
+	display: block;
+	margin: 0 auto;
+	width: 980px;
+	height: 700px;
+	background: blue;
+}
+
+.row {
+	position: relative;
+	width: 100px;
+	height: 700px;
+	float: right;
+	margin: 10px 20px;
+}

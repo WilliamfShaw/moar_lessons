@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Microblog</title>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/backbone-localstorage.js/1.1.14/backbone.localStorage-min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
+
+  <script src="js/app.js"></script>
+
+  <script src="js/models/post.js"></script>
+  <script src="js/models/author.js"></script>
+  <script src="js/collections/posts.js"></script>
+  <script src="js/collections/authors.js"></script>
+  <script src="js/views/navigationView.js"></script>
+
+  <script src="js/views/posts/postsListView.js"></script>
+  <script src="js/views/posts/postPreview.js"></script>
+  <script src="js/views/posts/newPostView.js"></script>
+  <script src="js/views/posts/editPostView.js"></script>
+
+  <script src="js/views/authors/authorsListView.js"></script>
+  <script src="js/views/authors/authorPreview.js"></script>
+  <script src="js/views/authors/newAuthorView.js"></script>
+  <script src="js/views/authors/editAuthorView.js"></script>
+
+  <script src="js/routers/postsRouter.js"></script>
+  <script src="js/routers/authorsRouter.js"></script>
+</head>
+<body>
+  <h1 id="page-title">Potatoes</h1>
+  <nav id="navigation"></nav>
+  <div id='main'></div>
+
+  <!-- TEMPLATES -->
+
+  <template id="navigation-template">
+    <li class="new-post">New Post</li>
+    <li class="new-author">New Author</li>
+    <li class="posts">Posts</li>
+    <li class="authors">Authors</li>
+  </template>
+
+  <!-- Posts -->
+
+  <template id="post-preview-template">
+    <p class="post-info"><strong>{{title}}</strong> - {{author}}</p>
+    <p class="view" id='{{id}}'>View...</p>
+    <hr>
+  </template>
+
+  <template id='post-full-template'>
+    <p class="post-info"><strong>{{title}}</strong> - {{author}}</p>
+    <p>{{date}}</p>
+
+    <div id='post-content'>
+      <p>{{content}}</p>
+    </div>
+
+    <p class="less">Less...</p>
+    <p class="edit">Edit...</p>
+    <hr>
+  </template>
+
+  <template id="new-post-template">
+    <input type="text" class="title">
+    <textarea class="content"></textarea>
+    <select name="author" class="author">
+    {{#each this}}
+      <option value="{{this}}">{{this}}</option>
+    {{/each}}
+    </select>
+    <button class="create">Create</button>
+  </template>
+
+  <template id="edit-post-template">
+    <input type="text" class="title" value={{title}}>
+    <textarea class="content">{{content}}</textarea>
+    <select name="author" class="author">
+    {{#each authors}}
+      <option value="{{this}}">{{this}}</option>
+    {{/each}}
+    </select>
+    <button class="edit">Edit</button>
+    <button class="delete">Delete Post</button>
+  </template>
+
+  <!-- Authors -->
+
+  <template id="author-preview-template">
+    <p class="author-info"><strong>{{name}}</strong> - {{blurb}}</p>
+    <p class="view">View...</p>
+    <hr>
+  </template>
+
+  <template id='author-full-template'>
+    <p class="author-info"><strong>{{name}}</strong> - {{blurb}}</p>
+    <img src="{{image}}" alt="">
+
+    {{#each posts}}
+    <p class="post-info"><strong>{{title}}</strong> </p>
+    <p class="view-post" id='{{id}}'>view</p>
+    {{/each}}
+    <p class="less">Less...</p>
+    <p class="edit">Edit...</p>
+    <hr>
+  </template>
+
+  <template id="new-author-template">
+    <input type="text" class="name">
+    <textarea class="blurb"></textarea>
+    <input type="text" class="image">
+    <button class="create">Create</button>
+  </template>
+
+  <template id="edit-author-template">
+    <input type="text" class="title" value='{{name}}'>
+    <input class="content" value='{{image}}'>
+    <input type="text" class='blurb' value="{{blurb}}">
+    <button class="edit">Edit</button>
+    <button class="delete">Delete Author</button>
+  </template>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+## DATABASES
+
+1. Why is it necessary for Databases to be ACIDic?  
+
+1. What is an ORM?
+
+1. Explain the differences between 1-to-1, 1-to-many, and many-to-many database relationships.  
+
+1. Given a domain of immersive courses and students, model this relationship using an ERD. (Students may only take one immersive course, please give each courses and students 5 attributes each).
+
+1. What is a database migration?
+
+## SERVERS/Node
+
+1. How does a server respond from a client request?
+
+1. What is middleware?  What are some examples of middleware we have been using in our Node Servers?
+
+1. How do we setup a node server?
+
+## ROUTES
+
+1. Describe the 5 RESTful routes we've been writing in our servers. Highlight with an example. Which verb are associated with each route?
+
+1. What is REST?  
+
+1. Explain the following routing function line by line.  
+
+app.post("/teams/:id/players", function (req, res) {
+  Team.findOne(req.params.id).then(function (team) {
+    Player.create(req.body).then(function (player) {
+      console.log(player, "ppopopooopppo")
+      team.addPlayer(player)
+      res.send(player)
+    })
+  })
+})
+
+
+## HOLDOVERS
+
+1. What is the DOM?
+
+1. Given the following code:
+
+```js
+alert(1);
+$(document).ready(function(){
+  alert(2);
+  $('#cast-spell').on("click", function(event){
+    alert(3);
+    $.ajax({
+      url: "/wizards",
+      dataType: "json"
+    }).done(function(data){
+      alert(4);
+    });
+    alert(5);
+  });
+  alert(6);
+});
+alert(7);
+```
+
+In what order will these alerts occur?  Assume that a user visits the page and then clicks the `#cast-spell` button. 
+
+1. Within a Backbone view, how do `listenTo()` functions work?  eg:
+`this.listenTo(this.collection, 'reset', this.renderAll);`
+`this.listenTo(this.collection, 'add', this.renderOne);`
+
+1. Explain the differences between the following jQuery methods: `.find()`, `.closest()`, `.parents()`, and `.children()`.

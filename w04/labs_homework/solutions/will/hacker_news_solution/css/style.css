@@ -1,0 +1,54 @@
+#article-preview {
+	position: absolute;
+	display: block;
+	margin: 30px 350px 0px;
+	height: 100%;
+	width: 50%;
+	text-align: center;
+	overflow: scroll;
+}
+
+#logo {
+	font-family: 'Passero One', cursive;
+	display: block;
+	margin: 45px auto;
+}
+
+html {
+	text-align: center;
+	background: url('http://www.mountairyhabitat.org/wp-content/uploads/2013/05/gray-background1.jpg') no-repeat 50% 50% fixed;
+	background-size: cover;
+	z-index: -1;
+}
+
+.article-result {
+	font-family: 'Poiret One', cursive;
+	background: rgba(166, 209, 255, 0.9);
+	margin-top: 20px;
+	border-radius: 20px;
+}
+
+#article-modal {
+	position: absolute;
+	height: 100%;
+	width: 700px;
+	display: none;
+	margin: 0px 362px;
+	background: rgba(255, 255, 255, 0.8);
+}
+
+#show-article {
+	position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+iframe {
+	position: relative;
+  height: 90%;
+  width: 100%;
+}
+
+#close {
+	color: blue;
+}

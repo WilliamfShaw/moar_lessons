@@ -1,0 +1,14 @@
+@import url(http://fonts.googleapis.com/css?family=Arvo);
+body {
+	background: url("http://i.ytimg.com/vi/XbzRkszv4_U/maxresdefault.jpg") ;
+	background-size: 350px 175px;
+	font-family: 'Arvo', serif;
+	margin: 0 auto;
+}
+
+h1 {
+	color: lavender;
+	margin: 0 auto;
+	font-size: 5em;
+	cursor: pointer;
+}

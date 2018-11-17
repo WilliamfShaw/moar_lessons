@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BackboneOmdbapiApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <h1>Backbone - Omdb API</h1>
+  <div id="login-form">
+    <input type="text" id="username" placeholder="username" autofocus="true">
+    <input type="password" id="password" placeholder="password" autofocus="true">
+    <button id="login">login</button>
+    <button id="sign-up">sign-up</button>
+  </div>
+  <div id="search-form"></div>
+  <div id="search"></div>
+  <div id="search-results"></div>
+  <div id="movie-modal">Hello</div>
+</body>
+</html>

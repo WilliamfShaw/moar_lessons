@@ -1,0 +1,7 @@
+<div class="team-show">
+  <img class="show-image" src="<%= @team.photo_url %>">
+  <p><%= @team.hometown %> <%= @team.name %></p>
+  <p>Number of Championships: <%= @team.number_of_championships %></p>
+  <a href="/teams/<%= @team.id %>/edit">Edit Team</a>
+  <a href="/teams/<%= @team.id %>" data-method="delete">Destroy</a>
+</div>

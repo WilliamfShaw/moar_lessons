@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>iTunes Search</title>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+ 	<script src='http://underscorejs.org/underscore-min.js'></script>
+ 	<script src="http://backbonejs.org/backbone-min.js"></script>
+ 	<script src="http://cdnjs.cloudflare.com/ajax/libs/backbone-localstorage.js/1.1.16/backbone.localStorage-min.js"></script>
+ 	<script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.0/handlebars.min.js"></script>
+	<script src='js/app.js'></script>
+ 	<script src='js/models/artist.js'></script>
+ 	<script src='js/models/song.js'></script>
+ 	<script src='js/collections/searches.js'></script>
+ 	<script src='js/views/searches/artist_result.js'></script>
+ 	<script src='js/views/searches/song_result.js'></script>
+ 	<script src='js/views/searches/results.js'></script>
+ 	<script ></script>
+</head>
+<body>
+
+	<h1>iTunes Search API!</h1>
+
+	<div id='results-container'>
+		<section id='search-section'>
+			<input type="text" name='search'>
+			<select name="search-type">
+				<option value="artist">Artist</option>
+				<option value="song">Song</option>
+			</select>
+			<button id='search-button'>Search</button>
+		</section>
+		<section id='results'></section>
+	</div>
+
+	<template id='song-template'>
+		<h4>{{ trackName }} </h4>
+		<img src="{{ artworkUrl100 }}">
+		<h4>{{ collectionName }}</h4>
+		<p>{{ artistName }}</p>
+		<p>{{ trackPrice }}</p>
+		<p>
+		  <audio controls='play'>
+		    <source src="{{previewUrl}}"></source>
+		  </audio>
+		</p>
+	</template>
+
+	<template id='artist-template'>
+		<h2>{{ artistName }}</h2>
+		<p>{{ primaryGenreName }}</p>
+		<p class='view'><strong>View Tracks</strong></p>
+	</template>
+
+</body>
+</html>

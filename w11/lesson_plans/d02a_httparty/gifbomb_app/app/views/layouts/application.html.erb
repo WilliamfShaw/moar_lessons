@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GifbombApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div id='gifs-container'>
+  <input type="text" id='term'>
+  <button id='search'>Search</button>
+  <button id='random'>Random Gif</button>
+  <section id='display'></section>
+</div>
+
+</body>
+</html>

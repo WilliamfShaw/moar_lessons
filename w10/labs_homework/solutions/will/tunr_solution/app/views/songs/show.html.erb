@@ -1,0 +1,12 @@
+<div class="single song">
+	<h2><%= @song.title %></h2>
+	<h4>
+		<%= link_to @song.artist.name, artist_path(@song.artist) %>
+	</h4>
+	<img src="<%= @song.artwork %>" alt="">
+	<p><%= @song.album %></p>
+	<audio controls='play'>
+		<source src="<%= @song.preview_url %>"></source>
+	</audio>
+</div>
+<%= link_to "Edit", edit_song_path(@song) %>

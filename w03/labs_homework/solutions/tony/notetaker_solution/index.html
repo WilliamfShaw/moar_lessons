@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Notetaker</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/backbone-localstorage.js/1.1.14/backbone.localStorage-min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
+	<!-- Step 1 - include all of our js files with appropriate script tags -->
+	<script src="js/app.js"></script>
+	<!-- Note I put app.js first so that var App would load first across our files.  -->
+	<script src="js/notePreviewView.js"></script>
+	<script src="js/noteModel.js"></script>
+	<script src="js/noteView.js"></script>
+	<script src="js/notesCollection.js"></script>
+	<script src="js/notesPreviewListView.js"></script>
+	
+</head>
+<body>
+
+
+	<div id="main-view">
+		<h1>Notetaker</h1>
+		<section id='preview-list-view'>
+		</section>
+		<section id='note-view'>
+		</section>
+	</div>
+
+<!-- Step 1 - Place all of our templates inside of template tags. -->
+<!-- Give each template tag an appropriate id -->
+	<template id='note-preview-template'>
+		<div class="note">
+			<p class="note-title">
+				{{title}}
+			</p>
+			<span class="delete">X</span>
+		</div>
+	</template>
+	
+	<template id='full-note-template'>
+		<p class='new'>new note</p>
+		<p class='delete'>delete</p>
+		<div class="input">
+			<p class="note-title">{{title}}</p>
+		</div>
+		<br>
+		<div class="input">{{content}}</div>
+		<br>
+		<input type="button" value="Edit" class="button edit">
+	</template>
+
+	<template id='edit-note-template'>
+		<div class="input">
+			<input type="text" name="title-update" id="title" value='{{title}}' autocomplete="off">
+		</div>
+		<br>
+		<div class="input">
+			<textarea name="content-update" id="content">
+				{{content}}
+			</textarea>
+		</div>
+		<br>
+		<input type='button' value="Update" class="button update">
+	</template>
+
+	<template id='new-note-template'>
+		<div class="input">
+			<input type="text" name="title" id="title" placeholder='Add a title...' autocomplete="off">
+		</div>
+		<br>
+		<div class="input">
+			<textarea name="content" id="content" placeholder='Start typing here...'></textarea>
+		</div>
+		<br>
+		<input type='button' value="Create" class="button create">
+	</template>
+
+</body>
+</html>

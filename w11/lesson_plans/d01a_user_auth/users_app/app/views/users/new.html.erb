@@ -1,0 +1,26 @@
+<h1>New User</h1>
+
+<% @user.errors.full_messages.each do |msg| %>
+  <li><%= msg %></li>
+<% end %>
+
+<hr>
+
+<%= form_for @user do |f| %>
+  <%= f.label :username %><br>
+  <%= f.text_field :username %><br>
+  <br>
+  <%= f.label :first_name %><br>
+  <%= f.text_field :first_name %><br>
+  <br>
+  <%= f.label :last_name %><br>
+  <%= f.text_field :last_name %><br>
+  <br>
+  <%= f.label :password %><br>
+  <%= f.password_field :password %><br>
+  <br>
+  <%= f.label :password_confirmation %><br>
+  <%= f.password_field :password_confirmation %><br>
+  <br>
+  <%= f.submit %>
+<% end %>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>VENÜ</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.min.js"></script>
+  <script src="/js/app.js"></script>
+</head>
+<body>
+  <h1>VENÜ</h1>
+
+	<section id='forms'>
+		<section id='errors'></section>
+		<span id='event'>Event</span>
+		<span id='artist'>Artist</span>
+		<span id='venue'>Venue</span>
+		<section id='container'></section>
+	</section>
+
+	<template id='new-artist-template'>
+		<p>Name<input type="text" name='name'></p>
+		<p>Genre (Rock, Pop, Jazz, Hiphop, Metal, EDM, Dubstep)<input type="text" name='genre'></p>
+		<p>Gross Earnings<input type="text" name='gross_earnings'></p>
+		<p><button id='artists'>New Artist</button></p>
+	</template>
+
+	<template id='new-event-template'>
+		<p>Name <input type="text" name='name'></p>
+		<p>Date <input type="date" name='date'></p>
+		<p>Duration (hours) <input type="number" name='duration'></p>
+		<p>Venue <select name="venue_id">
+			{{#each this}}
+			<option value="{{id}}">{{name}} | {{city}}</option>
+			{{/each}}
+		</select></p>
+		<p><button id='events'>New Event</button></p>
+	</template>
+
+	<template id='new-venue-template'>
+		<p>Name <input type="text" name='name'></p>
+		<p>Address <input type="text" name='address'></p>
+		<p>City <input type="text" name='city'></p>
+		<p>Booking Manager <input type="text" name='booking_manager'></p>
+		<p>Capacity <input type="number" name='capacity'></p>
+		<p><button id='venues'>New Venue</button></p>
+	</template>
+</body>
+</html>

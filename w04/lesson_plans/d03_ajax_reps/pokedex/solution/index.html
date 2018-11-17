@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pokédex</title>
+  <script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
+	<script src='http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.0/handlebars.min.js'></script>
+  <script src="js/app.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="pokedex">
+    <div id="menu"></div>
+    <div id="detail"></div>
+    <div id="pokemons"></div>
+    <div id="moves"></div>
+    <div id="types"></div>
+  </div>
+
+  <template id="pokeitem-template">
+    <li class="pokeitem" data-path="{{path}}">{{name}}</li>
+  </template>
+
+  <template id="moveitem-template">
+    <li class="moveitem" data-path="{{path}}">{{name}}</li>
+  </template>
+
+  <template id="typeitem-template">
+    <li class="typeitem" data-path="{{path}}">{{name}}</li>
+  </template>
+
+  <template id="pokedetail-template">
+    <h3 id="detail-name">{{name}}</h3>
+
+    <div>
+      <img id="detail-image" src="{{img}}" alt="{{name}}">
+    </div>
+    <hr>
+    <p class="types">{{types}}</p>
+    <hr>
+
+    <table>
+      <tbody>
+        <tr>
+          <td class="stat-name">Attack:</td>
+          <td class="stat-value">{{attack}}</td>
+        </tr>
+        <tr>
+          <td class="stat-name">Defense:</td>
+          <td class="stat-value">{{defense}}</td>
+        </tr>
+        <tr>
+          <td class="stat-name">Spl Atk:</td>
+          <td class="stat-value">{{splAttack}}</td>
+        </tr>
+        <tr>
+          <td class="stat-name">Spl Def:</td>
+          <td class="stat-value">{{splDefense}}</td>
+        </tr>
+        <tr>
+          <td class="stat-name">Speed:</td>
+          <td class="stat-value">{{speed}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </template>
+
+  <template id="movedetail-template">
+    <h3 id="detail-name">{{name}}</h3>
+    <table>
+      <tbody>
+        <tr>
+          <td class="stat-name">Power:</td>
+          <td class="stat-value">{{power}}</td>
+        </tr>
+        <tr>
+          <td class="stat-name">Accuracy:</td>
+          <td class="stat-value">{{accuracy}}</td>
+        </tr>
+        <tr>
+          <td class="stat-name">PP:</td>
+          <td class="stat-value">{{pp}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr>
+
+    <p class="description">{{description}}</p>
+  </template>
+
+  <template id="typedetail-template">
+    <h3 id="detail-name">{{name}}</h3>
+    <hr>
+    <h4>Supereffective</h4>
+    <span>{{supereffective}}</span>
+    <hr>
+    <h4>Ineffective</h4>
+    <span>{{ineffective}}</span>
+    <hr>
+    <h4>No Effect</h4>
+    <span>{{noEffect}}</span>
+    <hr>
+    <h4>Resistance</h4>
+    <span>{{resistance}}</span>
+    <hr>
+    <h4>Weakness</h4>
+    <span>{{weakness}}</span>
+  </template>
+</body>
+</html>

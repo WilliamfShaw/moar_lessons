@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>VENÜ</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.min.js"></script>
+  <script src="/js/app.js"></script>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div id="main">
+    <h1>VENÜ</h1>
+  	<section id='forms'>
+  		<section id='errors'></section>
+      <span class="nav" id='events'>Events</span> |
+      <span class="nav" id='upcoming-events'>Upcoming Events</span> |
+  		<span class="nav" id='artists'>Artists</span> |
+  		<span class="nav" id='venues'>Venues</span> |
+  		<span class="nav" id='large-venues'>Large Venues</span>
+      <br>
+  		<span class="nav" id='event'>Event</span> |
+  		<span class="nav" id='artist'>Artist</span> |
+  		<span class="nav" id='venue'>Venue</span>
+  		<section id='container'></section>
+  	</section>
+  </div>
+
+	<template id='new-artist-template'>
+		<p>Name<br><input type="text" name='name'></p>
+		<p>Genre (Rock, Pop, Jazz, Hiphop, Metal, EDM, Dubstep)<br><input type="text" name='genre'></p>
+		<p>Gross Earnings<br><input type="text" name='gross_earnings'></p>
+		<p><button id='artists'>New Artist</button></p>
+	</template>
+
+	<template id='new-event-template'>
+		<p>Name <br><input type="text" name='name'></p>
+		<p>Date <br><input type="date" name='date'></p>
+		<p>Duration (hours) <br><input type="number" name='duration'></p>
+		<p>Venue <br><select name="venue_id">
+			{{#each this}}
+			<option value="{{id}}">{{name}} | {{city}}</option>
+			{{/each}}
+		</select></p>
+		<p><button id='events'>New Event</button></p>
+	</template>
+
+	<template id='new-venue-template'>
+		<p>Name <br><input type="text" name='name'></p>
+		<p>Address <br><input type="text" name='address'></p>
+		<p>City <br><input type="text" name='city'></p>
+		<p>Booking Manager <br><input type="text" name='booking_manager'></p>
+		<p>Capacity <br><input type="number" name='capacity'></p>
+		<p><button id='venues'>New Venue</button></p>
+	</template>
+
+  <template id='artists-template'>
+    {{#each this}}
+		  <h2 class="artist-item">{{name}}</h2>
+      <p>{{genre}}</p>
+      <p>Earnings: ${{gross_earnings}}</p>
+    {{/each}}
+	</template>
+
+  <template id='events-template'>
+    {{#each this}}
+		  <h2 class="event-item">{{name}}</h2>
+      <span class="info" data-url="/events/{{id}}/info">More Info</span>
+    {{/each}}
+	</template>
+
+  <template id='venues-template'>
+    {{#each this}}
+		  <h2 class="venue-item">{{name}}</h2>
+      <p>{{address}}</p>
+      <p>{{city}}</p>
+      <p>Capacity: {{capacity}}</p>
+    {{/each}}
+	</template>
+</body>
+</html>

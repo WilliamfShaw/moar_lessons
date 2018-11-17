@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>weather</title>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.0/handlebars.min.js'></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Another weather Site</h1>
+    <input type="text" id="search-input" placeholder="Or enter a search term">
+    <button id="search-button">Search</button>
+    <div id="results"></div>
+
+    <template id='weather-template'>
+      <div class='weather'>
+        <p>{{city}}</p>
+        <p>{{country}}<p>
+        <p>{{temperature}}</p>
+        <p>{{description}}</p>
+      </div>
+    </template>
+
+  </body>
+</html>

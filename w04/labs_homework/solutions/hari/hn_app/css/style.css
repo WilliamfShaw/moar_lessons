@@ -1,0 +1,56 @@
+body {
+  text-align: center;
+  font-family: 'Arial';
+  color: #333;
+}
+
+#logo {
+  font-family: 'Impact';
+}
+
+.article-result {
+  width: 80%;
+  margin: 12px auto;
+  padding: 24px;
+  background: #f7f7f7;
+  border: 3px solid #f7f7f7;
+}
+
+.article-result:hover {
+  border: 3px solid #e9e9e9;
+}
+
+.title, .author {
+  font-weight: 100;
+}
+
+.title {
+  cursor: pointer;
+}
+
+#article-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display:none;
+  box-sizing: padding-box;
+  padding: 24px;
+}
+
+#show-article {
+  margin: 0 auto;
+  width: 80%;
+  height: 60%;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+}
+
+#close {
+  color: white;
+}

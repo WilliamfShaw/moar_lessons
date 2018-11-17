@@ -1,0 +1,10 @@
+<form action="<%= playlist_path(@playlist) %>" method="post">
+  <input type="hidden" name="_method" value="put">
+  <label>
+    Name<br>
+    <input type="text" name="playlist[name]" value="<%= @playlist.name %>">
+  </label>
+  <br>
+
+  <input type="submit" value="Update Playlist">
+</form>

@@ -1,0 +1,12 @@
+{
+  "description": "This lesson is designed to introduce the unit on the internet and web applications.",
+  "contents": {
+    "i_do": ["This is mostly a lecture, discussing communication protocols and the internet suite."],
+    "we_do": ["Small-group exercise on designing the internet."],
+    "you_do": ["None"]
+  },
+  "technologies": ["http", "curl", "tcp/ip"],
+  "resources": ["http://lounge.ga-instructors.com/t/designing-the-internet-an-early-exercise-that-went-really-well/78"],
+  "lesson_id": "c0efe92e-a02f-40e4-8a87-9cc142805d11",
+  "objective": "4.1"
+}

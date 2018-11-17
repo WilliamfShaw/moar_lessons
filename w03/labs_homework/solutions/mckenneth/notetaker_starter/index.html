@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Notetaker</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://underscorejs.org/underscore-min.js"></script>
+	<script src="http://backbonejs.org/backbone-min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/backbone-localstorage.js/1.1.14/backbone.localStorage-min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
+
+	<script src='js/note_model.js'></script>
+	<script src='js/note_collection.js'></script>
+	<script src='js/note_preview.js'></script>
+	<script src='js/note_preview_list.js'></script>
+	<script src='js/note_view.js'></script>
+	<script src='js/app.js'></script>
+</head>
+<body>
+
+
+
+	<div id="main-view">
+		<h1>Notetaker</h1>
+		<section id='preview-list-view'>
+		</section>
+		<section id='note-view'>
+		</section>
+	</div>
+
+<template id='preview-view'>
+    <p class="note-title">
+        {{title}}
+    </p>
+    <span class="delete">X</span>
+</template>
+<template id='noteview'>
+	<p class='new'>new note</p>
+	<p class='delete'>delete</p>
+	<div class="input">
+	    <p class="note-title">{{title}}</p>
+	</div>
+	<br>
+	<div class="input">
+	    {{content}}
+	</div>
+	<br>
+	<input type="button" value="Edit" class="button edit">
+</template>
+<template id='new-view'>
+	 <div class="input">
+        <input type="text" name="title" id="title" placeholder='Add a title...' autocomplete="off">
+    </div>
+    <br>
+    <div class="input">
+        <textarea name="content" id="content" placeholder='Start typing here...'></textarea>
+    </div>
+    <br>
+    <input type='button' value="Create" class="button create">
+</template>
+<template id='edit-view'>
+	<div class="input">
+    <input type="text" name="title-update" id="title" value='{{title}}' autocomplete="off">
+	</div>
+	<br>
+	<div class="input">
+	    <textarea name="content-update" id="content">
+	        {{content}}
+	    </textarea>
+	</div>
+	<br>
+	<input type='button' value="Update" class="button update">
+</template>
+
+</body>
+</html>

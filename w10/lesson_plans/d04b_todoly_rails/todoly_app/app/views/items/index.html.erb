@@ -1,0 +1,22 @@
+<h3>Doing</h3>
+<% @incomplete_items.each do |item| %>
+  <div>
+    <p><%= item.description %></p>
+    <a href="/items/<%= item.id %>">View</a> |
+    <a href="/items/<%= item.id %>/edit">Edit</a> |
+    <a href="/items/<%= item.id %>" data-method='delete'>Destroy</a>
+  </div>
+<% end %>
+
+<hr>
+
+<h3>Done</h3>
+
+<% @completed_items.each do |item| %>
+  <div>
+    <p><%= item.description %></p>
+    <a href="/items/<%= item.id %>">View</a> |
+    <a href="/items/<%= item.id %>/edit">Edit</a> |
+    <a href="/items/<%= item.id %>" data-method='delete'>Destroy</a>
+  </div>
+<% end %>

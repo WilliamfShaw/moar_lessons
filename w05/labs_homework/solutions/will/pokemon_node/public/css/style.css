@@ -1,0 +1,57 @@
+html {
+  background: url("http://media.giphy.com/media/j5mdEyURiNkA0/giphy.gif") no-repeat 50% 50% fixed;
+  background-size: cover;
+}
+
+#logo {
+  position: fixed;
+  width: 400px;
+  float: left;
+  margin-left: 50px;
+}
+
+#results-container {
+  display: none;
+  padding:20px 20px;
+  width: 600px;
+  float: right;
+  background: white;
+  overflow: scroll;
+  margin-right: 200px;
+}
+
+.result {
+float: left
+}
+
+.result img {
+  height: 150px;
+  width: 150px;
+}
+
+#search{
+  position: fixed;
+  margin-top: 200px;
+  margin-left: 100px;
+}
+#solo-pokemon {
+  position: fixed;
+  text-align: center;
+  height: 600px;
+  width: 600px;
+  display: none;
+  margin-left: 400px;
+  background: skyblue;
+}
+
+#solo-pokemon img {
+  height: 200px;
+  width: 200px;
+}
+
+#poke-info {
+  position: absolute;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}

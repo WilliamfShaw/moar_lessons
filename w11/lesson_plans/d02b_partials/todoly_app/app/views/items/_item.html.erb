@@ -1,0 +1,5 @@
+<p><strong><%= item.description %></strong></p>
+<p><%= item.completed %></p>
+<%= link_to( 'View', item_path(item.id) ) if params[:action] == 'index' %>
+<%= link_to 'Edit', edit_item_path(item.id) if params[:action] == 'show' %>
+<%= link_to 'Destroy', item_path(item.id) if params[:action] == 'show' %>

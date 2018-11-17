@@ -1,0 +1,67 @@
+@import url(http://fonts.googleapis.com/css?family=Lato);
+
+body {
+ 	font-family: 'Lato';
+ 	font-weight: 300;
+ 	background: url(http://data1.whicdn.com/images/112313968/large.jpg);
+}
+li {
+	list-style-type: none;
+	font-size: 50px;
+	color: lavender;
+	background: olive;
+}
+
+h2 {
+	font-size: 75px;
+	font-weight: 300;
+	text-align: center;
+	color: lavender;
+	background: olive;
+}
+
+input {
+	font-size: 40px;
+	text-align: center;
+}
+
+p {
+	font-size: 50px;
+	font-weight: 300;
+	text-align: center;
+	color: lavender;
+	background: olive;
+}
+
+img {
+	margin: 0 auto;
+}
+
+#poop-button {
+	width: 400px;
+	background-size: 100%;
+	margin: 0 auto;
+}
+
+#poop-button:hover {
+	cursor: pointer;
+}
+
+button {
+	color: lavender;
+	width: 100px;
+	height: 100px;
+	background: olive;
+	font-size: 25px;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+#users {
+	margin: 0 auto;
+	width: 600px;
+}
+
+

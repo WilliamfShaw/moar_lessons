@@ -1,0 +1,80 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  background: url(http://content.sportslogos.net/logos/6/216/full/543_new_york-knicks-stadium-2013.gif) no-repeat;
+  background-size: 1450px;
+  font-family: 'Century Gothic';
+  font-weight: 500;
+}
+
+.coach {
+	background: url(http://i.cdn.turner.com/nba/nba/teamsites/images/legacy/spurs/pop_0.png) no-repeat;
+  background-size: cover;
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  top: 446px;
+  left: 1000px;
+}
+
+.coach::after {
+	content: "Coach Gregg Popovich";
+	color: blue;
+	font-size: 1em;
+};
+
+h1 {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.shadowed {
+	font-size: 2em;
+	color: white;
+  text-shadow: 2px 2px orange;
+}
+
+#trophy {
+  background: url(http://content.sportslogos.net/logos/6/981/full/1bik8rxa9m0k45l6xxmk.gif) no-repeat;
+  background-size: 100% 100%;
+  top: 100px;
+  height: 300px;
+  position: absolute;
+  left: 1200px;
+  width: 150px;
+}
+
+.newKnicks {
+  background-size: cover;
+  color: orange;
+  height: 125px;
+  width: 400px;
+  list-style-type: none;
+}
+
+#James {
+  background: url(http://img.bleacherreport.net/img/images/photos/002/649/115/allstlbj_crop_north.jpg?w=630&h=420&q=75) no-repeat;
+  background-size: cover;
+}
+
+#Durant {
+  background: url(http://cdn1-www.craveonline.com/assets/uploads/2014/01/kevin-durant-thunder-jan31-getty.jpg) no-repeat;
+  background-size: cover;
+}
+
+#Gasol {
+  background: url(http://www.rantsports.com/nba/files/2014/09/Marc-Gasol1.jpg) no-repeat;
+  background-size: cover;
+}
+
+#Harden {
+  background: url(https://espngrantland.files.wordpress.com/2015/01/james-harden1.jpg) no-repeat;
+  background-size: cover;
+}
+
+#Paul {
+  background: url(http://www.seadubscentral.com/wp-content/uploads/2015/02/hi-res-6916468_crop_exact.jpg) no-repeat;
+  background-size: cover;
+}

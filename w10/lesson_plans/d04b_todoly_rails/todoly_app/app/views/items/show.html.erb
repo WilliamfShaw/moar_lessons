@@ -1,0 +1,12 @@
+<p>
+  <strong>Description:</strong>
+  <span><%= @item.description %><span>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <span><%= @item.completed ? 'Done' : 'Doing' %><span>
+</p>
+
+<a href="/items/<%= @item.id %>/edit">Edit</a> |
+<a href="/items">Back</a>

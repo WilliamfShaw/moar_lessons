@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  background: skyblue;
+}
+
+ul {
+  list-style: none;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+.sun {
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  height: 100px;
+  width: 100px;
+  border-radius: 100px;
+  background: rgb(255,255,100);
+}
+
+.earth {
+  position: fixed;
+  height: 40%;
+  width: 100%;
+  bottom: 0;
+  background: green;
+}
+
+.castle {
+  position: absolute;
+  left: 500px;
+  bottom: 300px;
+  width: 400px;
+  height: 500px;
+  z-index: 2;
+}
+
+.battlements {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  /*text-align: center;*/
+}
+
+.battlements li {
+  position: absolute;
+  top: 0;
+  left: 160px;
+  height: 80px;
+  width: 80px;
+  display: inline-block;
+  background: darkgray;
+  border-right: 2px solid gray;
+}
+
+.battlements li:first-child {
+  left: 0;
+}
+
+.battlements li:last-child {
+  left: auto;
+  right: 0;
+}
+
+.inner-castle {
+  position: absolute;
+  bottom: 0;
+  width: 400px;
+  height: 420px;
+  background: darkgray;
+  border-right: 2px solid gray;
+}
+
+.moat {
+  position: absolute;
+  left: 460px;
+  bottom: 260px;
+  width: 480px;
+  height: 80px;
+  border-radius: 40px;
+  background: dodgerblue;
+  z-index: 1;
+  border-bottom: 3px solid forestgreen;
+}
+
+.gate {
+  position: absolute;
+  left: 100px;
+  bottom: 0;
+  width: 206px;
+  height: 300px;
+
+  margin: 0;
+  padding: 0;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  background: black;
+  overflow: hidden;
+
+  /*text-wrap: none;*/
+}
+
+.gate li {
+  height: 100%;
+  width: 24px;
+  margin-right: 2px;
+  background: sienna;
+  display: inline-block;
+}
+
+.gate li:last-child {
+  margin-right: 0;
+}

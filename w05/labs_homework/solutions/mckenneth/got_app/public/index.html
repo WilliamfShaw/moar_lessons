@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link rel="stylesheet" href="/css/style.css">
+	<script src='bundle.js'></script>
+	<script src='js/app.js'></script>
+	<script src='js/models/house.js'></script>
+	<script src='js/models/human.js'></script>
+	<script src='js/collections/houses.js'></script>
+	<script src='js/collections/humans.js'></script>
+	<script src='js/views/house.js'></script>
+	<script src='js/views/houses.js'></script>
+	<script src='js/views/human.js'></script>
+	<script src='js/views/humans.js'></script>
+	<script src='js/views/human_modal_view.js'></script>
+</head>
+<body>
+
+	<h1>Winter Is Coming</h1>
+	<section id="westeros"></section>
+	<section id='modal'></section>
+
+
+	<template id="house-template">
+		<section class="house" style="background-image: url({{sigil}});">
+			<div class="mask">
+				<span class="house-name">House<br>{{name}}</span>
+			</div>
+		</section>
+	</template>
+
+	<template id="humans-template">
+		{{#each this}}
+			<li class="human-name" data-id='{{id}}'>{{name}}</span>
+		{{/each}}
+		<h6 class="back">Back</span>
+	</template>
+
+	<template id='human-modal-template'>
+		<span class='close'>close</span>
+			{{#if status}}
+				<h2>{{name}}</h2>
+			{{else}}
+				<h2 class="dead">{{name}}</h2>
+			{{/if}}
+			<h5>{{age}} years</h5>
+			<h6>Weapons</h6>
+			{{#each weapons}}
+				<p>{{this.name}} - {{this.material}}</p>
+			{{else}}
+				<li>Unarmed</li>
+			{{/each}}
+	</template>
+</body>
+</html>

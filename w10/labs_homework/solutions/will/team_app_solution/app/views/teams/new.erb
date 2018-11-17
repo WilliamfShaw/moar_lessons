@@ -1,0 +1,7 @@
+<%= form_for(@team) do |f| %>
+  <%= f.text_field :name, placeholder: 'Team Name' %>
+  <%= f.text_field :hometown, placeholder: 'Team City' %>
+  <%= f.text_field :photo_url, placeholder: 'PhotoURL' %>
+  <%= f.text_field :number_of_championships, placeholder: 'Number of Championships' %>
+  <%= f.submit %>
+<% end %>

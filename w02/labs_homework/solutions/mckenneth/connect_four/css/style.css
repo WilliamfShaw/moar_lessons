@@ -1,0 +1,46 @@
+h1 {
+  font-size: 80px;
+  color: blue;
+  font-family: Comic Sans MS;
+}
+body {
+  margin: 0 auto;
+  width: 1440px;
+  background-color: #333;
+  font-family: 'Arial';
+  color: #fff;
+  text-align: center;
+  user-select: none;
+}
+
+#gameboard-container {
+  margin: 0 auto;
+  width: 1440px;
+  clear:both;
+}
+
+.column {
+  width: 150px;
+  height: 815px;
+  background-color: #da6;
+  float:left;
+}
+
+.circle {
+  box-sizing: border-box;
+  width: 130px;
+  height: 130px;
+  margin: 5px;
+  border: 1px solid black;
+  border-radius: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  position: relative;
+}
+
+.red {
+  background-color: red;
+}
+
+.black {
+  background-color: black;
+}

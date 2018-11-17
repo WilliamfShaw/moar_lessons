@@ -1,0 +1,8 @@
+<%= form_for(@item) do |f| %>
+  <%= f.text_field :description %>
+  <%= f.label 'Done'  %>
+  <%= radio_button('item', 'completed', true)  %>
+  <%= f.label 'Not Done'  %>
+  <%= radio_button('item', 'completed', false)  %>
+  <%= f.submit %>
+<% end %>

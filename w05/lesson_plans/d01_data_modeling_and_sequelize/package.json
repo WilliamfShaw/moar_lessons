@@ -1,0 +1,16 @@
+{
+  "name": "d01_data_modeling_and_sequelize",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sequelize_playground.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "McKenneth Scott III <mckenneth.scott@gmail.com> (http://mckenneth.com/)",
+  "license": "ISC",
+  "dependencies": {
+    "pg": "^4.3.0",
+    "pg-hstore": "^2.3.1",
+    "sequelize": "^2.0.5"
+  }
+}

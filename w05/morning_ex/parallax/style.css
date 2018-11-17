@@ -1,0 +1,38 @@
+html, body {
+  padding: 0px;
+  margin: 0px;
+}
+
+.bg {
+  background: url('https://withanna.files.wordpress.com/2012/10/budapest-sky-via-withanna-wordpress-com.jpg') repeat;
+  width: 100%;
+  height: 400%;
+  /*positioning stuff*/
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: -1;
+}
+
+img {
+  position: relative;
+  display: inline-block;
+  width: 30%;
+}
+
+.break {
+  background-color: rgba(255, 127, 80, 0.5);
+  width: 100%;
+  height: 400px;
+  display: block;
+  text-align: center;
+}
+
+h1 {
+  position: relative;
+  color: white;
+  font-size: 72px;
+  vertical-align: middle;
+  /*add to get the coral coming through*/
+  z-index: 1;
+}

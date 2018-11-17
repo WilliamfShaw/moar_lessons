@@ -1,0 +1,34 @@
+body {
+  background: papayawhip;
+}
+
+h1 {
+  text-align: center;
+  font-family: Helvetica;
+  color: #333;
+}
+
+#board {
+  width: 700px;
+  height: 600px;
+  background: #00c;
+  margin: 0 auto;
+}
+
+.cell {
+  box-sizing: border-box;
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+  float: left;
+  border-radius: 100px;
+  background: #111;
+}
+
+.red {
+  background: red;
+}
+
+.yellow {
+  background: yellow;
+}

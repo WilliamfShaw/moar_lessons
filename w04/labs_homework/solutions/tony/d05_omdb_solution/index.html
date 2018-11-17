@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>OMDBackBone</title>
+
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/movie.css">
+	<link rel="stylesheet" href="css/modal.css">
+	<link rel="stylesheet" href="css/forms.css">
+
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/backbone-localstorage.js/1.1.14/backbone.localStorage-min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
+	
+	<script src="js/app.js"></script>
+	<script src="js/routers/movie.js"></script>
+	<script src="js/models/movie.js"></script>
+	<script src="js/collections/movies.js"></script>
+	<script src="js/views/movie.js"></script>
+	<script src="js/views/movies.js"></script>
+	<script src="js/views/movie_modal.js"></script>
+	<script src="js/views/search_form.js"></script>
+	
+</head>
+<body>
+  <h1>Backbone - Omdb API</h1>
+  <div id="search-form">
+    <input type="text" id="search-input" placeholder="Watchuwannafind?" autofocus="true">
+    <button id="search-button">Search</button>
+  </div>
+  <div id="search-results"></div>
+  <div id="movie-modal">Hello</div>
+
+	<template id='movie-template'>
+		<p class="movie-summary">
+		  <span>
+		    {{title}} ({{year}})
+		  </span>
+		</p>
+	</template>
+
+	<template id='movie-modal-template'>
+		<div class="close-modal">
+		  <span class="close-modal">X</span>
+		</div>
+		<div>
+		  <div class="modal-image">
+		    <img src="{{poster_url}}" />
+		  </div>
+		 	<div class="modal-info">
+		    <h2>{{title}}</h2>
+		    <h3>{{year}}</h3>
+		    <h4>Genre</h4>
+		    <p>{{genre}}</p>
+		    <h4>Plot</h4>
+		    <p>{{plot}}</p>
+		  </div>
+		</div>
+	</template>
+	
+</body>
+</html>

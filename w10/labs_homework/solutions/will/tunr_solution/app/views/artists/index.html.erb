@@ -1,0 +1,13 @@
+<p><%= link_to "Add a new Artist?", new_artist_path %></p>
+<% @artists.each do |artist| %>
+	<div class="artist all">
+		<h1><%= artist.name %></h1>
+		<div>
+			<img src="<%= artist.photo_url %>" width=400>
+			<p>
+				<%= artist.nationality %> | 
+				<%= link_to "View", artist_path(artist) %>
+			</p>
+		</div>
+	</div>
+<% end %>

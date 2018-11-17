@@ -1,0 +1,16 @@
+{
+  "name": "d01_sequelize_validations",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "McKenneth Scott III <mckenneth.scott@gmail.com> (http://mckenneth.com/)",
+  "license": "ISC",
+  "dependencies": {
+    "pg": "^4.3.0",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^2.0.5"
+  }
+}

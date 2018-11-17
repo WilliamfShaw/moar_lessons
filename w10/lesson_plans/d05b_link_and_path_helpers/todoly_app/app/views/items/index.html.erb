@@ -1,0 +1,9 @@
+<div>
+  <% @items.each do |item|%>
+    <p><%= item.description %></p>
+    <p><%= item.completed %></p>
+    <%= link_to 'View', item_path(item.id) %>
+    <%= link_to 'Edit', edit_item_path(item.id) %>
+    <%= link_to 'Destroy', item_path(item.id) %>
+  <% end %>
+</div>

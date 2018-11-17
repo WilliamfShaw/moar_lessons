@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TeamAppSolution</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div id="background-image">
+    <img class="phone" src="http://brandesi.com/wp-content/uploads/2015/02/iphone_PNG5724.png">
+    <div id="content">
+      <div id="add">
+        <a href="/teams/new">+</a>
+      </div>
+      <%= yield %>
+    </div>
+    <div id="home-button">
+      <a href="/teams">Home</a>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,102 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+#background-image .phone {
+  position: fixed;
+  height: 805px;
+  left: 250px;
+}
+
+#content {
+  border-radius: 5px;
+  background-color: black;
+  width: 363px;
+  height: 591px;
+  left: 478px;
+  top: 101px;
+  position: relative
+}
+
+.team{
+  background-color: white;
+  border-radius: 25%;
+  position: relative;
+  margin-top: 20px;
+  margin-left: 30px;
+  height: 85px;
+  width: 83px;
+  float: left;
+}
+
+.team .index-image {
+  margin-left: 3px;
+  margin-top: 5px;
+  width:75px;
+  height:75px;
+}
+
+#home-button {
+  left: 624px;
+  top: 111px;
+  position: relative;
+  border-radius: 50%;
+  height: 68px;
+  width: 73px;
+}
+
+#home-button a {
+  color: #F5F6F9;
+  text-decoration: none;
+  display: block;
+  margin-top: 21px;
+  margin-left: 15px;
+}
+
+.team-show {
+  text-align: center;
+  width: 363px;
+  height: 591px;
+  color: white;
+  font-size: 25px;
+}
+
+.team-show .show-image {
+  margin-top: 20px;
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.team-show a {
+  text-decoration: none;
+  color: black;
+}
+
+#form {
+  text-align: center;
+}
+
+#add {
+  width: 20px;
+  height: 20px;
+}
+
+#add a {
+  position: relative;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  left: 340px;
+}

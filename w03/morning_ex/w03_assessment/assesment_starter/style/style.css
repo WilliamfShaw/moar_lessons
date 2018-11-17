@@ -1,0 +1,39 @@
+body {
+	background: url(http://cdn2.hubspot.net/hub/159843/file-22698572-jpg/images/baseball_on_baseline.jpg) no-repeat;
+	background-size: 100%;
+}
+
+#forms-container {
+	text-align: center;
+	margin-right: 50px;
+	float: right;
+	height: 400px;
+	width: 300px;
+	background-color: rgba(216, 219, 158, 0.5); 
+	border-radius: 25px;
+}
+
+#team-container {
+	text-align: center;
+	display: block;
+	margin: 0px auto;
+	width: 600px;
+}
+
+#team-container img {
+	border-radius: 50%;
+}
+
+p {
+	padding-top: 50px 0px 0px 0px;
+	font-size: 20px;
+	font-family: 'Comic Sans MS';
+}
+
+.team {
+	border-radius: 25px;
+	height: 540px;
+	width: 500px;
+	background-color: rgba(216, 219, 158, 0.5);
+}
+

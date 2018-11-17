@@ -1,0 +1,52 @@
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  background-image: url(http://www.grizzleemartin.com/blog/wp-content/uploads/2013/04/17-pierce-the-veil-live-at-house-of-blues-orlando-florida-concert-photography-by-photos-by-chris-martin.jpg);
+  background-size: cover;
+
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+  height: 100%;
+
+  color: white;
+  font-size: 20px;
+  font-family: 'Helvetica Neue';
+  font-weight: 200;
+
+  text-align: center;
+}
+
+h1 {
+  margin-top: 0;
+  padding-top: 24px;
+  font-size: 72px;
+  font-weight: 100;
+  letter-spacing: 10px;
+}
+
+input {
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+}
+
+p {
+  color: whitesmoke;
+  font-weight: 100;
+}
+
+#main {
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+#current {
+	color: firebrick;
+}

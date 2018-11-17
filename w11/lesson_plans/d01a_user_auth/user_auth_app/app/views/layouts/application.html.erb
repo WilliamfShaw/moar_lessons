@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>UserAuthApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<% if current_user %>
+  <p>
+    Welcome: <%= current_user.username %> |
+    <%= link_to 'Log Out', sessions_path, method: :delete %>
+  </p>
+<% else %>
+  <p>
+    You are not logged in |
+    <%= link_to 'Sign Up', new_user_path %> |
+    <%= link_to 'Log In', sessions_new_path %>
+  </p>
+<% end %>
+
+<%= yield %>
+
+</body>
+</html>

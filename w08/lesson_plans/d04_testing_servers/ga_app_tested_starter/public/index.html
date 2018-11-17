@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<script src='bundle.js'></script>
+	<script src='js/app.js'></script>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<h4>General Assembly Tracker</h4>
+
+	<section id='forms'>
+		<section id='errors'></section>
+		<span id='course'>COURSE</span>
+		<span id='student'>STUDENT</span>
+		<span id='campus'>CAMPUS</span>
+		<section id='container'></section>
+	</section>
+
+	<template id='new-student-template'>
+		<p>First Name<input type="text" name='first_name'></p>
+		<p>Last Name<input type="text" name='last_name'></p>
+		<p>Age<input type="text" name='age'></p>
+		<p>Email<input type="text" name='email'></p>
+		<p><button id='students'>New Student</button></p>
+	</template>
+
+	<template id='new-course-template'>
+		<p>Name <input type="text" name='name'></p>
+		<p>Length [1-12] <input type="number" min='1' max='12' name='length'></p>
+		<p>Category <select name="category">
+			<option value="Workshop">Workshop</option>
+			<option value="Part-Time">Part-Time</option>
+			<option value="Immersive">Immersive</option>
+		</select></p>
+		<p>Start Date <input type="date" name='start_date'></p>
+		<p>End Date <input type="date" name='end_date'></p>
+		<p>Capacity <input type="number" min='0' max='70' name='capacity'></p>
+		<p>Campus <select name="campus_id">
+			{{#each this}}
+			<option value="{{id}}">{{name}} | {{city}}</option>
+			{{/each}}
+		</select></p>
+		<p><button id='courses'>New Course</button></p>
+	</template>
+
+	<template id='new-campus-template'>
+		<p>Name <input type="text" name='name'></p>
+		<p>Capacity <input type="text" name='capacity'></p>
+		<p>Address <input type="text" name='address'></p>
+		<p>City <input type="text" name='city'></p>
+		<p>President <input type="text" name='president'></p>
+		<p><button id='campuses'>New Campus</button></p>
+	</template>
+</body>
+</html>

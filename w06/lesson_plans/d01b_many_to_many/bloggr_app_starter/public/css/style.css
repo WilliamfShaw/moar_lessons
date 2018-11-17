@@ -1,0 +1,41 @@
+body {
+  color: #333;
+  font-family: Arial;
+}
+
+button {
+  padding: 6px;
+  background: none;
+  border: 1px solid lightgray;
+  border-radius: 6px;
+  color: gray;
+}
+
+button:hover {
+  background: lightgray;
+  color: white;
+}
+
+.tag-list {
+  list-style: none;
+}
+
+.tag {
+  font-size: 12px;
+  color: gray;
+  background: #f3f3f3;
+  border-radius: 4px;
+  padding: 6px;
+  margin: 6px;
+  display: inline;
+}
+
+.remove-tag {
+  margin-left: 12px;
+  color: lightgray;
+  cursor: pointer;
+}
+
+.remove-tag:hover {
+  color: crimson;
+}

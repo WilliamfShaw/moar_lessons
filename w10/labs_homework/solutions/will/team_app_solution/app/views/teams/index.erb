@@ -1,0 +1,6 @@
+<% @teams.each do |current_team| %>
+<div class="team">
+  <a href="/teams/<%= current_team.id %>"><img class="index-image" src="<%= current_team.photo_url %>"></a>
+</div>
+<% end %>
+

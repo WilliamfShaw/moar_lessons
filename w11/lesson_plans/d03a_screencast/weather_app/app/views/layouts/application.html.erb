@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WeatherApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<h1>Weather</h1>
+
+<div class="sun"></div>
+<div class="hill hill2"></div>
+<div class="hill hill1"></div>
+
+<div class="nav">
+<% if current_user%>
+  <span>Hey, <%= current_user.username %></span> |
+  <%= link_to 'Log Out', sessions_path, method: :delete %>
+<% else %>
+  <%= link_to 'Sign Up', new_user_path %>
+  <%= link_to 'Log In', sessions_new_path %>
+<% end %>
+</div>
+
+<%= yield %>
+
+</body>
+</html>
